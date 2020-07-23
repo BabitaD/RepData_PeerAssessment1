@@ -7,6 +7,11 @@ output:
 ---
 
 
+```r
+knitr::opts_chunk$set(fig.path='Figs/')
+```
+
+
 
 
 ```r
@@ -44,7 +49,7 @@ hist_fig1 <- with(totalStepsDf, hist(totalSteps, xlab = "Total Steps"
                                      ,main = "Histogram of Total Steps", col= "skyblue"))
 ```
 
-![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-1.png)
+![](Figs/unnamed-chunk-4-1.png)<!-- -->
 ### Mean of the total number of steps taken per day is 9354.2295082.
 ### Median of the total number of steps taken per day is 10395.
 
@@ -68,7 +73,7 @@ with(avgDailyActivity
             , col = "royalblue"))
 ```
 
-![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12-1.png)
+![](Figs/unnamed-chunk-6-1.png)<!-- -->
 
 ```r
 maxVal <- max(avgDailyActivity$avgSteps)
@@ -127,7 +132,7 @@ hist_fig2 <- with(new_totalStepsDf,
                        ,main = "Histogram 2", col= "blue"))
 ```
 
-![plot of chunk unnamed-chunk-15](figure/unnamed-chunk-15-1.png)
+![](Figs/unnamed-chunk-9-1.png)<!-- -->
 
 
 
@@ -187,7 +192,7 @@ plot + geom_line(color = "violet") + facet_grid( day ~.) +
   theme(plot.title = element_text(hjust = 0.5)) 
 ```
 
-![plot of chunk unnamed-chunk-18](figure/unnamed-chunk-18-1.png)
+![](Figs/unnamed-chunk-12-1.png)<!-- -->
 
 
 
