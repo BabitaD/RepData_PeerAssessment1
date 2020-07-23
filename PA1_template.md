@@ -14,10 +14,6 @@ library(knitr)
 library(ggplot2)
 ```
 
-```
-## Warning: package 'ggplot2' was built under R version 3.6.3
-```
-
 
 ## Loading and preprocessing the data
 
