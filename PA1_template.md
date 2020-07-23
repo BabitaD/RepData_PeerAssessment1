@@ -14,10 +14,6 @@ library(knitr)
 library(ggplot2)
 ```
 
-```
-## Warning: package 'ggplot2' was built under R version 3.6.3
-```
-
 
 ## Loading and preprocessing the data
 
@@ -121,7 +117,7 @@ hist_fig1 <- with(totalStepsDf, hist(totalSteps, xlab = "Total Steps"
                                      ,main = "Histogram of Total Steps", col= "skyblue"))
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-74-1.png)<!-- -->
 
 
 ### Mean of the total number of steps taken per day is 9354.2295082.
@@ -147,7 +143,7 @@ with(avgDailyActivity
             , col = "royalblue"))
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-76-1.png)<!-- -->
 
 ```r
 maxVal <- max(avgDailyActivity$avgSteps)
@@ -206,7 +202,7 @@ hist_fig2 <- with(new_totalStepsDf,
                        ,main = "Histogram 2", col= "blue"))
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-79-1.png)<!-- -->
 
 
 
@@ -266,7 +262,7 @@ plot + geom_line(color = "violet") + facet_grid( day ~.) +
   theme(plot.title = element_text(hjust = 0.5)) 
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-82-1.png)<!-- -->
 
 
 
