@@ -50,6 +50,7 @@ hist_fig1 <- with(totalStepsDf, hist(totalSteps, xlab = "Total Steps"
 ```
 
 ![](Figs/unnamed-chunk-4-1.png)<!-- -->
+
 ### Mean of the total number of steps taken per day is 9354.2295082.
 ### Median of the total number of steps taken per day is 10395.
 
