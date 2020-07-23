@@ -5,6 +5,10 @@ output:
     keep_md: true
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
 ```{r, message=FALSE}
 library(dplyr)
 library(knitr)
@@ -102,7 +106,7 @@ new_data <- rbind(data_NA, data_not_NA)
 
 ### impact of imputing missing data on the estimates of the total daily number of steps
 
-```{r, echo=TRUE, warning=FALSE}
+```{r, echo=TRUE}
 new_totalStepsDf <- new_data %>%
   group_by(date) %>%
   summarise(totalSteps = sum(steps, na.rm = TRUE))
@@ -137,7 +141,7 @@ As can be seen the the Mean and Median value have incresed after imputing NA val
 ## Are there differences in activity patterns between weekdays and weekends?
 
 
-```{r, echo=TRUE, warning=FALSE, message= FALSE}
+```{r, echo=TRUE, warning=FALSE, }
 weekend <- c("Saturday", "Sunday")
 new_data$day <- as.factor(ifelse(weekdays(new_data$date) %in% weekend, "Weekend", "Weekday"))
 
