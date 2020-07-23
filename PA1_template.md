@@ -1,7 +1,5 @@
 ---
 title: "Reproducible Research: Peer Assessment 1"
-Author: "Babita Daswani"
-Date: "07-24-2020"
 output: 
   html_document:
     keep_md: true
@@ -259,7 +257,7 @@ head(avgDailyActivity_byday)
 ```
 
 ```r
-plot <- ggplot(data = avgDailyActivity_byday, aes(interval, log(steps)))
+plot <- ggplot(data = avgDailyActivity_byday, aes(interval, steps))
 plot + geom_line(color = "violet") + facet_grid( day ~.) +
   xlab("Interval") + ylab("Number of Steps") + 
   ggtitle("Average Steps by Interval") +
