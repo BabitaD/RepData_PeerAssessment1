@@ -2,14 +2,19 @@
 title: "Reproducible Research: Peer Assessment 1"
 output: 
   html_document:
-    keep_md: TRUE
+    fig_caption: yes
+    keep_md: yes
 ---
+
+```{r global_options}
+#knitr::opts_chunk$set(fig.path='Figs/')
+```
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r, message=FALSE}
+```{r, message=FALSE, warning=FALSE}
 library(dplyr)
 library(knitr)
 library(ggplot2)
@@ -37,20 +42,11 @@ totalStepsDf <- data %>%
 mean_ <- mean(totalStepsDf$totalSteps)
 median_ <- median(totalStepsDf$totalSteps)
 ```
-
-### The Total number of steps taken per day
-```{r, echo=TRUE, fig.width=2}
-kable(totalStepsDf, digits = 2)
-```
-
-
 ### Histogram of the total number of steps taken each day
 ```{r, echo=TRUE, warning=FALSE}
 hist_fig1 <- with(totalStepsDf, hist(totalSteps, xlab = "Total Steps"
                                      ,main = "Histogram of Total Steps", col= "skyblue"))
-
 ```
-
 
 ### Mean of the total number of steps taken per day is `r mean_`.
 ### Median of the total number of steps taken per day is `r median_`.
